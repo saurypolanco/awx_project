@@ -4,6 +4,5 @@
   tasks:
   - name: instala vim
     apt: name=vim state=present
-    become: true
   - name: saluda
     shell: echo hola
