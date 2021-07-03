@@ -2,7 +2,5 @@
 
 - hosts: all
   tasks:
-  - name: instala vim
-    apt: name=vim state=present
   - name: saluda
     shell: echo hola
