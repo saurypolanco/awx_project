@@ -1,8 +1,12 @@
---- 
-- hosts: localhost 
-  remote_user: vagrant
-  become: yes
-  become_method: sudo 
-  tasks:
-    - name: install apache2 
-      apt: name=apache2 update_cache=yes state=latest
+---
+
+- name: Basic playbook run locally 
+  gather_facts: true 
+  hosts: localhost 
+  tasks: 
+    - name: Doing a ping
+      ping:
+
+    - name: Show info
+      debug:
+        msg: "Machine name: {{ ansible_hostname }}"
